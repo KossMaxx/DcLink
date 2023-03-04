@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Clients\ClientDto.cs" />
+    <Compile Remove="Clients\FirmDto.cs" />
+    <Compile Remove="Shared\BaseMapCommand.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="MassTransit" Version="7.3.1" />
+    <PackageReference Include="MediatR" Version="10.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LegacySql.Data\LegacySql.Data.csproj" />
+    <ProjectReference Include="..\LegacySql.Domain\LegacySql.Domain.csproj" />
+    <ProjectReference Include="..\LegacySql.Legacy.Data\LegacySql.Legacy.Data.csproj" />
+    <ProjectReference Include="..\MessageBus\MessageBus.csproj" />
+    <ProjectReference Include="..\Sagas.Contracts\Sagas.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

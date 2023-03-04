@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Clients\**" />
+    <EmbeddedResource Remove="Clients\**" />
+    <None Remove="Clients\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20201021100420_Add_SellingPriceMap.cs" />
+    <Compile Remove="Migrations\20201021100420_Add_SellingPriceMap.Designer.cs" />
+    <Compile Remove="Migrations\20201026160421_Add_Index_By_ErpGuid.cs" />
+    <Compile Remove="Migrations\20201026160421_Add_Index_By_ErpGuid.Designer.cs" />
+    <Compile Remove="Migrations\20201203091134_Add_Employee_Map.cs" />
+    <Compile Remove="Migrations\20201203091134_Add_Employee_Map.Designer.cs" />
+    <Compile Remove="Migrations\20201214122216_Add_Name_To_ProductTypeMap.cs" />
+    <Compile Remove="Migrations\20201214122216_Add_Name_To_ProductTypeMap.Designer.cs" />
+    <Compile Remove="Migrations\20201223151402_Add_PhysicalPersonMap.cs" />
+    <Compile Remove="Migrations\20201223151402_Add_PhysicalPersonMap.Designer.cs" />
+    <Compile Remove="Migrations\20201223151705_Add_PhysicalPersonMap.cs" />
+    <Compile Remove="Migrations\20201223151705_Add_PhysicalPersonMap.Designer.cs" />
+    <Compile Remove="Migrations\20210118150045_Add_WarehouseStockMap.cs" />
+    <Compile Remove="Migrations\20210118150045_Add_WarehouseStockMap.Designer.cs" />
+    <Compile Remove="Migrations\20210211123214_Add_Date_Why_Fieldt_To_NotFullMapping.cs" />
+    <Compile Remove="Migrations\20210211123214_Add_Date_Why_Fieldt_To_NotFullMapping.Designer.cs" />
+    <Compile Remove="Migrations\20210319184424_Add_PriceConditionMap.cs" />
+    <Compile Remove="Migrations\20210319184424_Add_PriceConditionMap.Designer.cs" />
+    <Compile Remove="Migrations\20210426085940_Add_MarketSegmentMap.cs" />
+    <Compile Remove="Migrations\20210426085940_Add_MarketSegmentMap.Designer.cs" />
+    <Compile Remove="Migrations\20210521112943_Add_BonusMap_PenaltyMap.cs" />
+    <Compile Remove="Migrations\20210521112943_Add_BonusMap_PenaltyMap.Designer.cs" />
+    <Compile Remove="Migrations\20210604203857_Add_Length_Of_ErpChangedDate.cs" />
+    <Compile Remove="Migrations\20210604203857_Add_Length_Of_ErpChangedDate.Designer.cs" />
+    <Compile Remove="Migrations\20220201085703_Add_PartnerProductGroupMaps.cs" />
+    <Compile Remove="Migrations\20220201085703_Add_PartnerProductGroupMaps.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.2" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LegacySql.Domain\LegacySql.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

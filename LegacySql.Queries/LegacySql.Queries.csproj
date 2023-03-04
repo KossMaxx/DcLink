@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="Dapper.SqlBuilder" Version="2.0.78" />
+    <PackageReference Include="MediatR" Version="10.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LegacySql.Data\LegacySql.Data.csproj" />
+    <ProjectReference Include="..\LegacySql.Domain\LegacySql.Domain.csproj" />
+    <ProjectReference Include="..\LegacySql.Legacy.Data\LegacySql.Legacy.Data.csproj" />
+  </ItemGroup>
+
+</Project>

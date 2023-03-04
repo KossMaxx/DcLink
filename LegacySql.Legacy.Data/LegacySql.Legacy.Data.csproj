@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="LegacyModels\**" />
+    <EmbeddedResource Remove="LegacyModels\**" />
+    <None Remove="LegacyModels\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="ProductionLegacyDbContext.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Configurations\ProductDescriptionConfiguration.cs~RF18bd4a4.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LinqKit.Core" Version="1.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Routing.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LegacySql.Data\LegacySql.Data.csproj" />
+    <ProjectReference Include="..\LegacySql.Domain\LegacySql.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
